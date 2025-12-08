@@ -1,0 +1,95 @@
+header{
+    z-index: 100;
+    width: 100%;
+    height: 100px;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 10%;
+    background-color: #fff;
+
+}
+.logo{
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.select-lang{
+    select{
+        border: none;
+        outline: none;
+        background-color: none;
+        option{
+            background-color: #fff;
+        }
+    }
+}
+nav:has(.main-menu:hover .sub-menu) .sub-menu{
+    height: 300px;
+    opacity: 1;
+}
+nav:has(.main-menu:hover .sub-menu)::before{
+    height: 300px;
+    border-top: 2px solid #ddd;
+}
+nav{
+    /*has = 조건에 만족하는 부모 요소를 선택 할 수 있음 */
+    &::before{
+        content: '';
+        position: absolute;
+        top: calc(100px - 2px);
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 1200px;  
+
+        height: 0;
+        transition: 0.3s;
+        background-color: #ffffff;
+        border-top: 2px solid transparent; 
+    }
+    >ul{
+        display: flex;
+        gap: 2rem;
+        .main-menu{
+            padding: 0.5rem 1rem;
+            flex: 0 0 150px;
+            font-size: 1.1rem;
+            position: relative;
+            border-bottom: 2px solid transparent;
+            text-align: center;
+            transition: 0.5s;
+            &:has(.sub-menu):hover{
+                border-bottom: 2px solid blue;
+            }
+            &:hover>.sub-menu{
+                background-color: #e0eafd;
+            }
+            .sub-menu{
+                padding: 0.5rem;
+                position: absolute;
+                font-size: 0.8rem;
+                opacity: 0;
+                width: 100%;
+                height: 0;
+                left: 0;
+                overflow: hidden;
+                text-align: left;
+                background-color: #fff;
+                transition: 0.3s;
+                top: calc(100% + 2px);
+                li{
+                    padding: 0.5rem 0;
+                    &:hover > a{
+                        color: blue;
+                    }
+                }
+                
+            }
+        }
+    }
+}
