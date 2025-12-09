@@ -1,0 +1,55 @@
+#comus-page{
+    height: 100vh;
+    .page-view{
+        height: 100%;
+        overflow: hidden;
+        .page-list{
+            height: 100%;
+            display: flex;
+            justify-content: flex-start;
+        }
+    }
+}
+/*각각 페이지 설정*/
+.page{
+    padding: 10rem;
+    flex: 0 0 100vw;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+    .left{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .top{
+            p:nth-child(1){
+                color: #999;
+                line-height: 1.5;
+                white-space: pre-wrap; /* \n을 인식해서 줄바꿈 처리*/
+            }
+            p:nth-child(2){
+                cursor: pointer;
+                margin-top: 2rem;
+                font-weight: bolder;
+            }
+        }
+        .bottom{
+            p{
+                color: dodgerblue;
+                font-weight: bolder;
+                font-size: 2rem;
+            }
+            h2{
+                font-size: 4rem;
+                margin: 1rem 0;
+            }
+        }
+    }
+    img{
+        width: 50%;
+        aspect-ratio: 1/1;
+        object-fit: contain;
+    }
+}

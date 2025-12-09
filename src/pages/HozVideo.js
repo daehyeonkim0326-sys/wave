@@ -17,31 +17,45 @@ const HozVideo = () => {
         width:"80%",
         height:"80vh",
         borderRadius:'4rem'
+    })
+    .to('h2',{
+        opacity: 0
+    },"<")
+    .to('.video-txt',{
+        opacity: 0.7
     });
     ScrollTrigger.create({
         animation: tl,
-        height:'100vh',
-        ease:'none',
+        // height:'100vh',
+        // ease:'none',
             trigger:containerRef.current,
             start:"center center",
             end:'+=3000',
             scrub:1,
             pin: true,
-            markers:true
+            markers:false
             
         });
     },{scope:containerRef});
-    
-    
-    
   return (
-    <section id="hoz-video">
+    <section id="hoz-video" ref={containerRef}>
         <h2>이커머스가 연결되고 변화해서</h2>
-        <div className="video-wrap" ref={containerRef}>
+        <div className="video-wrap" >
             <video loop autoPlay muted ref={videoRef}>
                 <source src={videoData} type="video/mp4"/>
             </video>
+            <ul className="video-txt">
+                <li>
+                    <span>Con</span> + <span>nect</span> → <span>Wave</span>
+                </li>
+                <li>
+                    <span>함께</span>
+                    <span>연결하고</span>
+                    <span>큰 파도를 만들어 내는 것</span>
+                </li>
+            </ul>
         </div>
+        <h2>큰 파도를 만들어냅니다.</h2>
     </section>
   )
 }
