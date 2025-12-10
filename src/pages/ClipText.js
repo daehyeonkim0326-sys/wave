@@ -32,7 +32,7 @@ const ClipText = () => {
                 end:"+=3000",
                 pin:true,
                 scrub: 1,
-                markers:false
+                markers:true
         })
         },{scope:containerRef});
     
@@ -42,14 +42,19 @@ const ClipText = () => {
             <div className="text-content">
                 <p>그 동안 고객과 셀러의 연결성을 강화하기 위해</p>
                 <p>독립적이고 자율적인 연합군처럼 움직여 왔지만</p>
-                <p className="text-wrap">
-                    <span className="color-txt">생성형 AI 플레이</span>
+                <div className="text-wrap">
+                    <div>
+                        <span className="color-txt">생성형 AI 플레이</span>
                         <img src={img01} alt="생성형 AI 플레이"/>
-                    를 기반으로 한 
-                    <span className="color-txt">One Team</span>
+                        를
+                    </div> 
+                    <div>
+                        기반으로 한 
+                        <span className="color-txt">One Team</span>
                         <img src={img02} alt="One Tema"/>
-                        으로서</p>
-                <p>시너지 극대화에 최선을 다하고 있습니다.</p>
+                        으로서</div>
+                        <p>시너지 극대화에 <br className="mobile-br"/>최선을 다하고 있습니다.</p>
+                    </div>
             </div>
         </div>
     </section>

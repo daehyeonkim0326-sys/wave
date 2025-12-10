@@ -1,4 +1,5 @@
 import { useGSAP } from "@gsap/react";
+import Benner from "./Benner";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import videoData from "../assets/main_video.mp4";
@@ -35,6 +36,7 @@ const MainVideo = () => {
                 <source src={videoData} type="video/mp4"/>
             </video>
         </div>
+        <Benner/>
     </section>
   )
 }

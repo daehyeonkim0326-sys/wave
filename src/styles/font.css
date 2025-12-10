@@ -7,3 +7,12 @@ body{
     font-display: swap;
 }
 }
+/*pc기본*/
+html{
+    font-size: 16px;
+}
+@media all and (max-width:768px) {
+    html{
+        font-size: 12px;
+    }
+}

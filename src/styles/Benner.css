@@ -1,11 +1,16 @@
 #mqrquee{
-    position: fixed;
-    top: 70%;
+    position: absolute;
+    top: 50%;
+    left: 0;
     z-index: 10;
+    padding-right: 4rem;
+    width: max-content;
+    /*컨텐츠 사이즈에 맞춰 width 재설정*/
     ul{
         display: flex;
         justify-content: space-around;
         align-items: center;
+        width: 100%;
         gap: 4rem;
         li{
             flex: 1;

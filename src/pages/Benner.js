@@ -24,8 +24,8 @@ const Benner = () => {
             ease:'none',
             scrollTrigger:{
                 trigger:containerRef.current,
-                start:'top 70%',
-                end: '+=200',
+                start:'top 50%',
+                end: '+=500',
                 scrub: 1
             }
         });

@@ -1,11 +1,13 @@
 #comus-page{
-    height: 100vh;
+    /*footer가 보여지게 하기 위해서 hieght값 설정*/
+    height: auto;
     .page-view{
-        height: 100%;
+        height: 100vh;
         overflow: hidden;
         .page-list{
             height: 100%;
             display: flex;
+            flex-direction: row;
             justify-content: flex-start;
         }
     }
@@ -51,5 +53,29 @@
         width: 50%;
         aspect-ratio: 1/1;
         object-fit: contain;
+    }
+}
+@media all and (max-width:768px){
+    #comus-page{
+        width: 100%;
+        .page-view{
+            width: 100%;
+            height: auto;
+            .page-list{
+                flex-direction: column;
+            }
+        }
+        .page{
+            width: 100%;
+            padding: 5rem;
+            flex-direction: column-reverse;
+            .left{
+                width: 100%;
+                flex-direction: column-reverse;
+            }
+            img{
+                width: 100%;
+            }
+        }
     }
 }

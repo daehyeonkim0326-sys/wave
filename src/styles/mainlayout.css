@@ -1,0 +1,38 @@
+#main-layout{
+    overflow-x: hidden;
+}
+main{
+    #about{
+        height: 80vh;
+        padding-top: 200px;
+        h2{
+            text-align: center;
+        }
+        ul{
+            margin: 1rem 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            font-size: 2rem;
+        }
+        .summary{
+            text-align: center;
+            padding: 3rem 0;
+            font-size: 5rem;
+            background-color: #000;
+            color: aliceblue;
+
+        }
+    }
+    #info{
+        height: 80vh;
+        padding: 200px;
+        div{
+            height: 100vh;
+            font-size: 10rem;
+            text-align: center;
+            border: 2px solid #222;
+        }
+    }
+}

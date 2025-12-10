@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom"
 import Footer from "./Footer.js"
 import Header from "./Header.js"
 import Main from "./Main.js"
-
+import "../styles/mainlayout.css"
 const MainLayout = () => {
   return (
     <div id="main-layout">

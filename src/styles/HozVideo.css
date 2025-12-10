@@ -17,7 +17,7 @@
 
     video{
         width: 100%;
-        height: 0vh;
+        height: 0;
         object-fit: cover;
     }
     .video-txt{
@@ -34,8 +34,9 @@
         }
         li:nth-child(1){
                 gap: 2rem;
-                font-size: 3rem;
+                font-size: clamp(1rem,4vw,3rem);
                 span{
+                    font-size: clamp(2rem,2vw,5rem);
                     font-weight: bolder;
                     font-size: 5rem;
                 }
@@ -56,4 +57,13 @@
         }
     }
 }
+}
+@media all and (max-width:768px) {
+    #hoz-video{
+        .video-wrap{
+            .video-txt{
+                display: block;
+            }
+        }
+    }
 }
