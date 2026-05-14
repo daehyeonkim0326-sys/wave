@@ -2,7 +2,7 @@
   "name": "wave",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://daehyeonkim0326-sys.github.io/wave/",
+  "homepage": "https://daehyeonkim0326-sys.github.io/wave",
   "dependencies": {
     "@babel/core": "^7.16.0",
     "@gsap/react": "^2.1.2",
