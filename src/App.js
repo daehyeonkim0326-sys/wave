@@ -12,12 +12,12 @@ const App=()=> {
           <Routes>
             <Route path="/" element={<MainLayout/>}>
               <Route index element={<Wave/>}/>
-            <Route path="info" index element={<Info title="연혁"/>}/>
+              <Route path="info" element={<Info title="연혁"/>}/>
               <Route path="about" element={<About/>}/>
-              <Route index element={<Summary title="사업개요"/>}/>
-              <Route path="consumer" index element={<Summary title="컨슈머커머스"/>}/>
-              <Route path="seller" index element={<Summary title="셀러커머스"/>}/>
-              <Route path="crossborder" index element={<Summary title="제휴제안"/>}/>
+              <Route path="summary" element={<Summary title="사업개요"/>}/>
+              <Route path="consumer" element={<Summary title="컨슈머커머스"/>}/>
+              <Route path="seller" element={<Summary title="셀러커머스"/>}/>
+              <Route path="crossborder" element={<Summary title="제휴제안"/>}/>
             </Route>
           </Routes>
     </BrowserRouter>
