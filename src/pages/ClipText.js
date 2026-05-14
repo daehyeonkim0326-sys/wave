@@ -30,9 +30,9 @@ const ClipText = () => {
                 trigger: containerRef.current,
                 start:"center center",
                 end:"+=3000",
-                pin:true,
+                pin:false,
                 scrub: 1,
-                markers:true
+                markers:false
         })
         },{scope:containerRef});
     

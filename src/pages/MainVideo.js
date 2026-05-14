@@ -20,8 +20,8 @@ const MainVideo = () => {
                 start:"center 60%",
                 end:"+=3000",
                 scrub: 1,
-                pin:true,
-                markers:false
+                pin:false,
+                markers:false,
             }
         });
     },{scope:containerRef});

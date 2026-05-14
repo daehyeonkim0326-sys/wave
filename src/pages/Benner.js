@@ -17,7 +17,13 @@ const Benner = () => {
             xPercent:-50,
             duration: 30,
             ease:'none',
-            repeat: -1
+            repeat: -1,
+            pin:false,
+             //다음 컨텐츠가 핀이 끝날때까지 아래에 있도록: 공간확보
+            pinSpacing:true,
+            markers:false
+            
+            
         });
         gsap.to(containerRef.current,{
             y:'50vh',
@@ -26,7 +32,11 @@ const Benner = () => {
                 trigger:containerRef.current,
                 start:'top 50%',
                 end: '+=500',
-                scrub: 1
+                scrub: 1,
+                pin:false,
+                 //다음 컨텐츠가 핀이 끝날때까지 아래에 있도록: 공간확보
+                pinSpacing:false,
+                markers:false
             }
         });
     },{scope:containerRef});
