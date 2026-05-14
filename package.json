@@ -2,6 +2,7 @@
   "name": "wave",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://daehyeonkim0326.github.io/wave",
   "dependencies": {
     "@babel/core": "^7.16.0",
     "@gsap/react": "^2.1.2",
@@ -63,9 +64,11 @@
     "workbox-webpack-plugin": "^7.4.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test"
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -140,6 +143,7 @@
     ]
   },
   "devDependencies": {
+    "@craco/craco": "^7.1.0",
     "gh-pages": "^6.3.0",
     "react-scripts": "5.0.1"
   }
