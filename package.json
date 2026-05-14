@@ -74,7 +74,12 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "ignorePatterns": [
+
+    "craco.config.js"
+
+  ]
   },
   "browserslist": {
     "production": [
@@ -136,12 +141,7 @@
       "jest-watch-typeahead/testname"
     ],
     "resetMocks": true
-  },
-  "babel": {
-    "presets": [
-      "react-app"
-    ]
-  },
+  }, 
   "devDependencies": {
     "@craco/craco": "^7.1.0",
     "gh-pages": "^6.3.0",

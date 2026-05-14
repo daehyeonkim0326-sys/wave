@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter , Route, Routes } from "react-router-dom";
 import "./styles/font.css";
 import "./styles/reset.css";
 import Summary from "./pages/Summary";
@@ -8,7 +8,7 @@ import MainLayout from "./layout/MainLayout";
 import Info from "./pages/Info";
 const App=()=> {
   return (
-    <BrowserRouter>
+    <HashRouter>
           <Routes>
             <Route path="/" element={<MainLayout/>}>
               <Route index element={<Wave/>}/>
@@ -20,7 +20,7 @@ const App=()=> {
               <Route path="crossborder" element={<Summary title="제휴제안"/>}/>
             </Route>
           </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
