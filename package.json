@@ -32,10 +32,7 @@
     "gsap": "^3.15.0",
     "html-webpack-plugin": "^5.5.0",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^30.4.2",
-    "jest-dom": "^4.0.0",
     "jest-resolve": "^27.4.2",
-    "jest-watch-typeahead": "^1.0.0",
     "mini-css-extract-plugin": "^2.4.5",
     "postcss": "^8.4.4",
     "postcss-flexbugs-fixes": "^5.0.2",
@@ -66,10 +63,10 @@
     "workbox-webpack-plugin": "^7.4.1"
   },
   "scripts": {
-  "start": "BABEL_ENV=development NODE_ENV=development node scripts/start.js",
-  "build": "BABEL_ENV=production NODE_ENV=production node scripts/build.js",
-  "test": "BABEL_ENV=test NODE_ENV=test node scripts/test.js"
-},
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -143,6 +140,7 @@
     ]
   },
   "devDependencies": {
-    "react-scripts": "^0.0.0"
+    "gh-pages": "^6.3.0",
+    "react-scripts": "5.0.1"
   }
 }
