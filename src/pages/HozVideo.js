@@ -26,8 +26,8 @@ const HozVideo = () => {
     });
     ScrollTrigger.create({
         animation: tl,
-        // height:'100vh',
-        // ease:'none',
+        height:'100vh',
+        ease:'none',
             trigger:containerRef.current,
             start:"center center",
             end:'+=3000',
@@ -46,12 +46,25 @@ const HozVideo = () => {
             </video>
             <ul className="video-txt">
                 <li>
-                    <span>Con</span> + <span>nect</span> → <span>Wave</span>
+                    <span className="deskmode">Con + nect → Wave</span>
                 </li>
                 <li>
-                    <span>함께</span>
-                    <span>연결하고</span>
-                    <span>큰 파도를 만들어 내는 것</span>
+                    <div className="mobile-mode">
+                        <div className="txt-tie">
+                        <span className="txt">Con</span>
+                        <span>함께</span>
+                        </div>
+                        <span className="sign">+</span>
+                        <div className="txt-tie">
+                        <span className="txt">nect</span>
+                        <span>연결하고</span>
+                        </div>
+                    </div>
+                    <span className="sign2">↓</span>
+                    <div className="txt-tie">
+                        <span className="txt">Wave</span>
+                        <span>큰 파도를 만들어 내는 것</span>
+                    </div>
                 </li>
             </ul>
         </div>

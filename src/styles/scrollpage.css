@@ -1,81 +1,119 @@
 #comus-page{
-    /*footer가 보여지게 하기 위해서 hieght값 설정*/
     height: auto;
-    .page-view{
-        height: 100vh;
-        overflow: hidden;
-        .page-list{
-            height: 100%;
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-        }
-    }
 }
-/*각각 페이지 설정*/
-.page{
+
+#comus-page .page-view{
+    height: 100vh;
+    overflow: hidden;
+}
+
+#comus-page .page-list{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+#comus-page .page{
     padding: 10rem;
     flex: 0 0 100vw;
     height: 100%;
     display: flex;
     justify-content: space-between;
     gap: 5rem;
-    .left{
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        .top{
-            p:nth-child(1){
-                color: #999;
-                line-height: 1.5;
-                white-space: pre-wrap; /* \n을 인식해서 줄바꿈 처리*/
-            }
-            p:nth-child(2){
-                cursor: pointer;
-                margin-top: 2rem;
-                font-weight: bolder;
-            }
-        }
-        .bottom{
-            p{
-                color: dodgerblue;
-                font-weight: bolder;
-                font-size: 2rem;
-            }
-            h2{
-                font-size: 4rem;
-                margin: 1rem 0;
-            }
-        }
-    }
-    img{
-        width: 50%;
-        aspect-ratio: 1/1;
-        object-fit: contain;
-    }
 }
+
+#comus-page .page .left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#comus-page .page .left .top p:nth-child(1){
+    color: #999;
+    line-height: 1.5;
+    white-space: pre-wrap;
+}
+
+#comus-page .page .left .top p:nth-child(2){
+    cursor: pointer;
+    margin-top: 2rem;
+    font-weight: bolder;
+}
+
+#comus-page .page .left .bottom p{
+    color: dodgerblue;
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+#comus-page .page .left .bottom h2{
+    font-size: 4rem;
+    margin: 1rem 0;
+}
+
+#comus-page .page img{
+    width: 50%;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+}
+
 @media all and (max-width:768px){
     #comus-page{
         width: 100%;
-        .page-view{
-            width: 100%;
-            height: auto;
-            .page-list{
-                flex-direction: column;
-            }
-        }
-        .page{
-            width: 100%;
-            padding: 5rem;
-            flex-direction: column-reverse;
-            .left{
-                width: 100%;
-                flex-direction: column-reverse;
-            }
-            img{
-                width: 100%;
-            }
-        }
+    }
+
+    #comus-page .page-view{
+        width: 100%;
+        height: auto;
+        overflow: visible;
+    }
+
+    #comus-page .page-list{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        transform: none !important;
+        justify-content: flex-start;
+    }
+
+    #comus-page .page{
+        width: 100%;
+        padding: 1rem;
+        flex: none;
+        height: auto;
+        flex-direction: column-reverse;
+        gap: 1rem;
+        min-width: 0;
+    }
+
+    #comus-page .page .left{
+        width: 100%;
+        flex-direction: column-reverse;
+        gap: 1rem;
+    }
+
+    #comus-page .page .left .top p:nth-child(1){
+        font-size: 0.75rem;
+        line-height: 1.4;
+    }
+
+    #comus-page .page .left .top p:nth-child(2){
+        margin-top: 1rem;
+        font-size: 0.75rem;
+    }
+
+    #comus-page .page .left .bottom p{
+        font-size: 1rem;
+    }
+
+    #comus-page .page .left .bottom h2{
+        font-size: 1.2rem;
+    }
+
+    #comus-page .page img{
+        width: 100%;
     }
 }

@@ -1,65 +1,78 @@
-#clip-text{
-    height: 100vh;  
+#clip-text {
+    height: 100vh;
     background-color: black;
-    .mask-layer{
-        width: 100%;
-        height: 100%;
-        background-color: #fff;
-        color: #000;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-size: 2.5rem;
-        font-weight: bolder;
-        clip-path: inset(100% 100% 100% 100%);
-        .text-content{
-            text-align: center;
-            line-height: 1.5;
-            .text-wrap{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 1rem;
-                div{
-                    display: block;
-                    justify-content: center;
-                    align-items: center;
-                    .mobile-br{
-                        display: none;
-                    }
-                    
-                
-                img{
-                    /* display: none; */
-                    transform: scale(0);
-                }
-            }
-            }
-        }
-    }
 }
-@media all and (max-width:768px){
-    #clip-text{
-        .mask-layer{
-            .text-content{
-                width: 70%;
-                word-break: keep-all;
-                .text-wrap{
-                    flex-direction: column;
-                    div{
-                        flex-direction: column;
-                        div{
-                            flex-wrap: wrap;
-                            .mobile-br{
-                                display: block;
-                                content: '';
-                                width: 40%;
-                            }
-                        }
-                    }
-                }
-            }
-        }
+
+#clip-text .mask-layer {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    clip-path: inset(100% 100% 100% 100%);
+}
+
+#clip-text .mask-layer .text-content {
+    text-align: center;
+    line-height: 1.5;
+}
+
+#clip-text .mask-layer .text-content .text-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+#clip-text .mask-layer .text-content .text-wrap div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#clip-text .mask-layer .text-content .mobile-br {
+    display: none;
+}
+
+#clip-text .mask-layer .text-content .text-wrap div img {
+    transform: scale(0);
+}
+#clip-text .mask-layer .text-content .text-wrap div span .mobile-br{
+    display: none;
+}
+@media all and (max-width: 768px) {
+    #clip-text .mask-layer .text-content {
+        width: 70%;
+        word-break: keep-all;
+         font-size: 20px;
     }
+
+    #clip-text .mask-layer .text-content .text-wrap {
+        flex-direction: column;
+       
+    }
+
+    #clip-text .mask-layer .text-content .text-wrap div {
+        flex-direction: row;
+    }
+    #clip-text .mask-layer .text-content .text-wrap div img{
+        height: 3vh;
+    }
+    #clip-text .mask-layer .text-content .text-wrap div div {
+        flex-wrap: wrap;
+    }
+
+    #clip-text .mask-layer .text-content .mobile-br {
+        display: block;
+        content: '';
+        width: 40%;
+    }
+    #clip-text .mask-layer .text-content .text-wrap div span .mobile-br{
+    display: flex;
+}
 }
